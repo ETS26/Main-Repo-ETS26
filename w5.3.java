@@ -20,7 +20,7 @@ public class example3 {
         Scanner input = new Scanner(System.in);
         int a,b;
           System.out.println("lütfen b sayısını giriniz: ");
-            b = input.nextInt();
+          b = input.nextInt();
         for(a=1;a<=99;a++)
        {
           
