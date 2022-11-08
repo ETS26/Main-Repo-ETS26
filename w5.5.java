@@ -23,14 +23,14 @@ public class example5 {
          System.out.println("lütfen sütun sayısını giriniz: ");
          int b = input.nextInt();
           
-        for(int i=1;i<=b;i++){
+         for(int i=1;i<=b;i++){
             
-        for(int j=1;j<=a;j++){
+         for(int j=1;j<=a;j++){
          System.out.print("*");
-        }
+         }
          System.out.println();
             
-        }
+         }
     }
     
 }
