@@ -18,18 +18,18 @@ public class example5 {
      */
     public static void main(String[] args) {
          Scanner input = new Scanner(System.in);
-          System.out.println("lütfen satır sayısını giriniz: ");
-           int a = input.nextInt();
-           System.out.println("lütfen sütun sayısını giriniz: ");
-           int b = input.nextInt();
+         System.out.println("lütfen satır sayısını giriniz: ");
+         int a = input.nextInt();
+         System.out.println("lütfen sütun sayısını giriniz: ");
+         int b = input.nextInt();
           
-            for(int i=1;i<=b;i++){
+        for(int i=1;i<=b;i++){
             
-            for(int j=1;j<=a;j++){
-               
-                System.out.print("*");
-            }
-            System.out.println();
+        for(int j=1;j<=a;j++){
+         System.out.print("*");
+        }
+         System.out.println();
+            
         }
     }
     
