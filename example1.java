@@ -15,11 +15,11 @@ public class example1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in); //konsoldan deger almak için tanımladık
+        Scanner input = new Scanner(System.in); 
         System.out.println("Lütfen km cinsinden deger giriniz: ");
         int km = input.nextInt();
         int metre = km*1000;
-         System.out.println("Hesaplanan metre degeri: "+metre);
+        System.out.println("Hesaplanan metre degeri: "+metre);
          
         
         
