@@ -19,7 +19,7 @@ public class example2 {
         System.out.println("Lütfen fahrenheit cinsinden deger giriniz: ");
         double f = input.nextDouble();
         double c = (f-32)/ 1.8;
-        System.out.println("Hesaplanan celcius degeri: "+c);
+        System.out.println("Hesaplanan celsius degeri: "+c);
     }
     
 }
