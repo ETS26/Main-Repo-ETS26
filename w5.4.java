@@ -16,9 +16,9 @@ public class example4 {
     public static void main(String[] args) {
         for(int i = 1;i<=9;i++){
             System.out.println(i+" lerin çarpımı");
-            for(int j=1;j<=9;j++){
-                int a=i*j;
-                System.out.println(i+"x"+j+"="+a);
+        for(int j=1;j<=9;j++){
+            int a=i*j;
+            System.out.println(i+"x"+j+"="+a);
             }
         }
     }
