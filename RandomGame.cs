@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 
-namespace WindowsFormsApp4._22._10._2020
+namespace WindowsFormsApp4
 {
     public partial class Form1 : Form
     {
