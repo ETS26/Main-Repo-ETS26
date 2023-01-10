@@ -17,24 +17,27 @@ public class s2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Örnek 6.70
-        int n;
-        double aci,f,x,t=0;
-        Scanner input = new Scanner(System.in);
-        System.out.println("Açı değeri giriniz: ");
-        aci = input.nextDouble();
-        System.out.println("Terim sayısı giriniz: ");
-        n = input.nextInt();
-        x = Math.toRadians(aci);
-        for (int i = 1; i <= n; i++) {
-          f=1;
-          for (int j = 1; j <= (2*i)-1; j++) {
-           f*=j; 
-          }
-          t+=Math.pow(-1, i-1)*Math.pow(x,(2*i)-1)/f;
+       Scanner input = new Scanner(System.in);
+       System.out.println("Bir n sayısı giriniz");
+       int n = input.nextInt();
+       karetop(n);
+       
+    }
+    public static int karetop(int a){
+        int sayac=0;
+        for (int i = 2; i < a; i++) {
+            if (a % i == 0) {
+                sayac++;
+            }
         }
-         System.out.println("Seri açılımla hesaplanan değer: "+t);
-         System.out.println("komutla hesaplanan değer: "+Math.sin(x));
+        if (sayac==0) {
+           System.out.println("asal sayıdır"); 
+        }
+        else
+        {
+           System.out.println("asal sayı değildir"); 
+        }
+        return a;
     }
     
 }

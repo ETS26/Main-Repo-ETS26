@@ -1,6 +1,6 @@
 
-import java.util.Random;
 import java.util.Scanner;
+import java.util.Random;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,26 +17,29 @@ public class s5 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        //Örnek 6.73
-        Random r = new Random();//Randomu tanımlama
-        Scanner input = new Scanner(System.in);
-        int a = 65+ r.nextInt(25);//65-90 arası sayı üretme
-        char b =(char)a;//Üretilen sayıyı harf karşılığına çevirme
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i+" inci Tahmininizi giriniz:");
-            char tahmin = input.next().charAt(0);
-            if(tahmin==b){
-              System.out.println(i+" tahminde bildiniz");
-              break;  
-            }
-            else if(i==10){
-                System.out.println("10 hakkınız bitti");
-                System.out.println("Doğru harf: "+b);
+     public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
+      System.out.println("lb giriniz");
+      int lb = input.nextInt();
+      System.out.println("ub giriniz");
+      int ub = input.nextInt();
+      int[][] dizi=dizitop(lb,ub);
+        
+    }
+    public static int[][] dizitop(int lb,int ub){
+      Random rnd = new Random();
+      System.out.println("nxn yazınız: ");
+      Scanner input = new Scanner(System.in);
+      int n = input.nextInt();
+      int[][] a = new int[n][n];
+        System.out.println("matrisi girin: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+               a[i][j]=rnd.nextInt(ub-lb)+lb; 
+               System.out.println((i+1)+" inci satır "+(j+1)+" inci sütun: "+a[i][j]);
             }
         }
-        
-        
+       return a;
     }
     
 }

@@ -17,16 +17,32 @@ public class s3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Örnek 6.71
-        double t=0;
-        Scanner input = new Scanner(System.in);
-        System.out.println("Terim sayısı giriniz: ");
-        int n = input.nextInt();
-        for (int i = 0; i < n; i++) {
-            t+=(double)1/((2*i+1)*(2*i+2));
-        }
-        System.out.println("Terim sayısına göre ln(2) değeri: "+t);
+       int[] dizi=siralama();
         
+    }
+    public static int[] siralama(){
+      System.out.println("kaç elemanlı dizi olacağını yazınız: ");
+      Scanner input = new Scanner(System.in);
+      int n = input.nextInt();
+      int[] a = new int[n];
+        for (int i = 0; i < a.length; i++) {
+            System.out.print((i+1)+" inci sayı: ");
+            a[i]=input.nextInt();
+        }
+        int s=0;
+        for(int i = 0; i < a.length; i++)
+        {
+            for(int j = i+1; j < a.length; j++)
+            {
+                if(a[j] < a[i]) {
+                    s = a[i];
+                    a[i] = a[j];
+                    a[j] = s;
+                }
+            }
+            System.out.print(a[i]+" > ");
+        }
+       return a;
     }
     
 }

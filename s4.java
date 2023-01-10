@@ -1,5 +1,4 @@
 
-import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -18,22 +17,45 @@ public class s4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Örnek 6.72
-        int r,s=0,tahmin;//tanımlama
-        Scanner input = new Scanner(System.in);
-        r=(int)(Math.random()*98)+1;//1 ile 99 arası sayı üretir
-        System.out.println("0 ile 100 arası bir sayı tahmin ediniz: ");
-        do{
-        tahmin = input.nextInt();
-        s++;
-        if(tahmin>r){
-        System.out.println("Daha küçük bir sayı giriniz");
+       int[][] dizi=dizitop();
+        
+    }
+    public static int[][] dizitop(){
+      System.out.println("nxn yazınız: ");
+      Scanner input = new Scanner(System.in);
+      int n = input.nextInt();
+      int[][] a = new int[n][n];
+      int[][] b = new int[n][n];
+      int[][] c = new int[n][n];
+        System.out.println("1.matrisi girin: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+              System.out.print((i+1)+" inci satır "+(j+1)+" inci sütun: ");
+               a[i][j]=input.nextInt(); 
+            }
+           
         }
-        else if(tahmin<r){
-        System.out.println("Daha büyük bir sayı giriniz");
+        System.out.println("2.matrisi girin: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+              System.out.print((i+1)+" inci satır "+(j+1)+" inci sütun: ");
+               b[i][j]=input.nextInt(); 
+            }
+           
         }
-        }while(r!=tahmin);//tahmin random sayıya eşit olana kadar devam eder
-        System.out.println(s+" denemede buldunuz");
+        System.out.println("Toplam matrisi: ");
+        for(int i = 0; i < n; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {
+               c[i][j]=a[i][j]+b[i][j];
+               System.out.println((i+1)+" inci satır "+(j+1)+" inci sütun: "+c[i][j]);
+               
+            }
+            
+        }
+        
+       return c;
     }
     
 }
