@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etsspor</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    var takimVerileri = [
+["5.01.2024", "17.00", "Gaziantep FK", " ", "Pendikspor"],
+["5.01.2024", "20.00", "Bitexen Antalyaspor", " ", "Corendon Alanyaspor"],
+["5.01.2024", "20.00", "Beşiktaş.", " ", "Kasımpaşa"],
+["6.01.2024", "13.30", "Çaykur Rizespor", " ", "Atakaş Hatayspor"],
+["6.01.2024", "16.00", "Rams Başakşehir Futbol Kulübü", " ", "Yukatel Adana Demirspor"],
+["6.01.2024", "19.00", "Yilport Samsunspor", " ", "Vavacars Fatih Karagümrük"],
+["6.01.2024", "19.00", "Mke Ankaragücü", " ", "Trabzonspor"],
+["7.01.2024", "13.30", "Mondíhome Kayserispor", " ", "Ems Yapı Sivasspor"],
+["7.01.2024", "16.00", "İstanbulspor", " ", "Fenerbahçe"],
+["7.01.2024", "19.00", "Galatasaray", " ", "Tümosan Konyaspor"]
+ ];
+var takimVerileri2 = [
+["13.01.2024", "15.30", "Chelsea", "", "Fulham"],
+["13.01.2024", "20.30", "Newcastle Utd", "", "Manchester City"],
+["14.01.2024", "17.00", "Everton", "", "Aston Villa"],
+["14.01.2024", "19.30", "Man United", "", "Tottenham"],
+["15.01.2024", "22.45", "Burnley", "", "Luton Town"],
+["20.01.2024", "15.30", "Arsenal", "", "Crystal Palace"],
+["20.01.2024", "20.30", "Brentford", "", "Nottingham Forest"],
+["21.01.2024", "17.00", "Sheffield United", "", "West Ham"],
+["21.01.2024", "19.30", "AFC Bournemouth", "", "Liverpool"],
+["22.01.2024", "22.45", "Brighton & Hove Albion", "", "Wolverhampton"]
+];
+var takimVerileri3 = [
+["12.01.2024", "22.30", "Bayern München", "", "Hoffenheim"],
+["13.01.2024", "17.30", "RB Leipzig", "", "Eintracht Frankfurt"],
+["13.01.2024", "17.30", "Freiburg", "", "Union Berlin"],
+["13.01.2024", "17.30", "Mainz 05", "", "Wolfsburg"],
+["13.01.2024", "17.30", "Köln", "", "Heidenheim"],
+["13.01.2024", "17.30", "Augsburg", "", "Bayer Leverkusen"],
+["13.01.2024", "20.30", "Darmstadt 98", "", "Borussia Dortmund"],
+["14.01.2024", "17.30", "Bochum", "", "Werder Bremen"],
+["14.01.2024", "19.30", "Mönchengladbach", "", "Stuttgart"]
+];
+var takimVerileri4 = [
+["12.01.2024", "23.00", "Sevilla", "", "Deportivo Alaves"],
+["13.01.2024", "16.00", "Las Palmas", "", "Villarreal"],
+["13.01.2024", "18.15", "Mallorca", "", "Celta Vigo"],
+["13.01.2024", "20.30", "Athletic Bilbao", "", "Real Sociedad"],
+["13.01.2024", "23.00", "Real Betis", "", "Granada"],
+["14.01.2024", "16.00", "Almeria", "", "Girona"],
+["14.01.2024", "18.15", "Cadiz", "", "Valencia"],
+["30.01.2024", "23.00", "Barcelona", "", "Osasuna"],
+["31.01.2024", "23.00", "Atl. Madrid", "", "Vallecano"],
+["01.02.2024", "23.00", "Getafe", "", "Real Madrid"]
+];
+var takimVerileri5 = [
+["05.01.2024", "22.45", "Bologna", "", "Genoa"],
+["06.01.2024", "14.30", "Inter", "", "Hellas Verona"],
+["06.01.2024", "17.00", "Frosinone", "", "Monza"],
+["06.01.2024", "20.00", "Lecce", "", "Cagliari"],
+["06.01.2024", "22.45", "Sassuolo", "", "Fiorentina"],
+["07.01.2024", "14.30", "Empoli", "", "Milan"],
+["07.01.2024", "17.00", "Torino", "", "Napoli"],
+["07.01.2024", "17.00", "Udinese", "", "Lazio"],
+["07.01.2024", "20.00", "Salernitana", "", "Juventus"],
+["07.01.2024", "22.45", "Roma", "", "Atalanta"]
+];
+
+var tabloAlani = document.getElementById("tabloAlani");
+
+var selectBox = document.getElementById("ligSec");
+
+selectBox.addEventListener("change", function() {
+  var secilenLig = selectBox.value;
+
+  if (secilenLig === "lig1") {
+    tabloAlani.innerHTML = ""; 
+    tabloyuGoster(takimVerileri);
+  } else if (secilenLig === "lig2") {
+    tabloAlani.innerHTML = ""; 
+    tabloyuGoster(takimVerileri2);
+  }
+  else if (secilenLig === "lig3") {
+    tabloAlani.innerHTML = ""; 
+    tabloyuGoster(takimVerileri3);
+  }
+  else if (secilenLig === "lig4") {
+    tabloAlani.innerHTML = ""; 
+    tabloyuGoster(takimVerileri4);
+  }
+  else if (secilenLig === "lig5") {
+    tabloAlani.innerHTML = ""; 
+    tabloyuGoster(takimVerileri5);
+  }
+  else{
+    tabloAlani.innerHTML = "";
+  }
+});
+function tabloyuGoster(veriler) {
+  var tabloHTML = "<table border='2'><thead><tr><th>Tarih</th><th>Saat</th><th>Ev Sahibi Takım</th><th>Skor</th><th>Deplasman Takımı</th></tr></thead><tbody>";
+        
+
+  for (var i = 0; i < veriler.length; i++) {
+    tabloHTML += "<tr align='center'>";
+    for (var j = 0; j < veriler[i].length; j++) {
+      tabloHTML += "<td>" + veriler[i][j] + "</td>";
+    }
+    tabloHTML += "</tr>";
+  }
+
+  tabloHTML += "</tbody></table>";
+  tabloAlani.innerHTML = tabloHTML;
+}
+
+});
+
+</script>
+<style>
+    body{
+        background: #b7bbf0;
+        color: #fdfbfb;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        word-spacing:2px;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        
+    }
+    .sayfa{
+        width: 1160px;
+        margin-left: 180px;
+    }
+    
+    .ana h1{
+            padding: 10px;
+            font-size: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background: #0d136b;
+            border-bottom: 4px dashed white;
+            margin-top: 15px;
+        }
+    .ana{
+        margin-bottom: 20px;
+        width: 1160px;
+        height: 630px;
+        margin-top: 20px;
+        background: #0d136b;
+        border-radius: 5px;
+    }
+    .ust{
+        background: #0d136b;
+        padding-left: 20px;
+        border-radius: 5px;
+    }
+    select{
+        margin-left: 130px;
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    .alt{
+        background: #0d136b;
+    }
+    #logo{
+        float: left;
+        width: 260px;
+        margin-top: 7px;
+        margin-left: 10px;
+    }
+    .clear{
+            clear: both;
+        }
+    #logo h1{
+        margin: 0;
+        padding: 0;
+        font-size: 60px;
+        text-transform: uppercase;
+        
+    }
+    table{
+        
+        margin-top: 7px;
+        margin-left: 130px;
+        width: 900px;
+        height: 70px;
+        align-items: center;
+        border-color: white;
+        font-size: 15px;
+    }
+    .fiksturyazı{
+        margin-left: 390px;
+        font-size: 20px;
+    }
+    #logo h1 a{
+        font-family: 'Times New Roman', Times, serif;
+        text-decoration: none;
+        color: #DBDBDB;
+        letter-spacing: 3px;
+    }
+    
+    #logo p{
+        color: #DBDBDB;
+        font-family: Georgia;
+        margin-left: 3px;
+        margin-top: 0;
+        padding-top: 0;
+        letter-spacing: 2px;
+    }
+    
+    #menu{
+        float: right;
+        width: 650px;
+        margin: 30px 0 0 0;
+        padding: 0;
+        font-size: 13px;
+        text-align: right;
+    }
+    
+    #menu ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    #menu ul li{
+        display:inline-block;
+        margin-right: 60px;
+    }
+    
+    #menu ul li a{
+        text-decoration: none;
+        font-size: 13px;
+        font-family: Verdana;
+        color: #DBDBDB;
+    }
+    .sec {
+       margin-left: 15px;
+    }
+</style>
+<body>
+    
+    <div class="sayfa">
+        <div class="ust">
+            <div id="logo">
+                <h1><a>ETSSPOR</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="etsspor.html">Anasayfa</a></li>
+                    <li><a href="puandurumu.html">Puan Durumları</a></li>
+                    <li><a href="fikstur.html">Fikstür</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div> 
+     <div class="ana">
+         <h1>Fikstür</h1>  
+        <br>
+        <div>
+            <select id="ligSec">
+                <option value="0">Lig Seçiniz...</option>
+                <option value="lig1">Süper Lig (Türkiye)</option>
+                <option value="lig2">Premier Lig (İngiltere)</option>
+                <option value="lig3">Bundesliga (Almanya)</option>
+                <option value="lig4">La Liga (İspanya)</option>
+                <option value="lig5">Seria A (İtalya)</option>
+              </select>
+              <div class="fiksturyazı">Önümüzdeki Hafta Oynanacak Maçlar</div>
+        </div>
+        <div id="tabloAlani"></div>
+     </div>
+     
+</body>
+</html>
