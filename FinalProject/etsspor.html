@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>etsspor</title>
+    <script>
+     let slideIndex = 1;
+     showSlides(slideIndex);
+
+    function plusSlides(n) {
+     showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      var yaz=document.getElementById("yaz");
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+     for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+        if(n==1){yaz.innerHTML="Fenerbahçe, Süper Kupa finalinde Galatasaray ile karşılaşacak.Sabah'ın haberine göre; Bu mücadeleden galibiyetle ayrılmak isteyen sarı-lacivertliler planını hazırladı.<br>1- Ligdeki derbide isabetli şut atamayan Fenerbahçe'de ilk olarak teknik heyet, oyunculara moral konuşmaları yaptı.<br>2- Başkan Ali Koç ve yöneticiler Samandıra'ya ziyarette bulundu ve prim sözü verdi."+
+     "<br>3- Fred'in oynayacak olması ile birlikte moraller daha da yerine geldi."+
+     "<br>4- Fred'in yokluğunda pas düzeni değişen sarı-lacivertliler yeniden normal şablonunda oynayacak."+
+     "<br>5- Stoperde görevini başarı ile yerine getiren Jayden Oosterwolde, İsmail Kartal'dan tam not alırken bugün de Djiku ile partner olacak."+
+     "<br>6- Cengiz Ünder, ligdeki derbide etkisiz bir 45 dakika geçirmişti. Milli oyuncu bu kez kulübede şans bekleyecek."+
+     "<br>7- Edin Dzeko, ligdeki maçta büyük üzüntü yaşadı. Bugün kupayı kazanarak kendini affettirmek isteyen oyuncu tamamen derbiye konsantre olmuş durumda."+
+     "<br>8- Son 2 haftadır kötü bir performans ortaya koyan Dusan Tadic, İsmail Kartal ile özel bir görüşme yaptı. Beklentilerinin yüksek olduğunu vurgulayan Kanarya'nın hocası, Tadic'e moral verdi."+
+     "<br>9- Miguel Crespo ve İsmail'i idman performanslarına göre seçen deneyimli teknik adam son taktik idmanda İsmail Yüksek'i 11'de başlattı."+
+     "<br>10- Bu sezon duran toplarda başarısız olan Fenerbahçe, derbiye özel duran top çalıştı.";}
+        else if(n==2){yaz.innerHTML=" Galatasaray ile Fenerbahçe, 2023 Süper Kupa final maçında karşı karşıya gelecek.Okan Buruk, derbi öncesi Fenerbahçe'yi böyle vuracak."+
+    "<br>1- Suudi Arabistan'a kaybetmeden gitmek isteyen Galatasaray, Kadıköy'de bu yüzden kontrollü oyunu tercih etti."+
+    "<br>2- Fenerbahçe ile deplasmanda berabere kalarak istediğini alan Galatasaray moralli olarak Süper Kupa'ya hazırlandı."+
+    "<br>3- Okan Buruk, oyuncularına bir gün izin verdi ve takımını salı akşamı Florya'da topladı."+
+    "<br>4- Fiziksel olarak yıpranan Sacha Boey, Ziyech (Kadroya alınmadı) ve İcardi haftayı aktif dinlenerek geçirdi."+
+    "<br>5- Süper Kupa'ya Şampiyonlar Ligi maçlarında olduğu gibi hazırlanan Galatasaray, son taktik çalışmayı Riyad yolculuğu öncesi Florya'da yaptı."+
+    "<br>6- Sakat Oliveira, Sanchez, Ziyech ve izinli Angelino'dan yoksun olarak Arabistan'a gitti."+
+    "<br>7- Son derbinin 11'ine göre Ziyech yerine Tete, Mertens yerine Zaha'nın dev maça başlaması bekleniyor."+
+    "<br>8- Fred'in döneceğini dikkate alan teknik heyet, rakip analizlerini Brezilyalı yıldıza göre yaptı."+
+    "<br>9- Zaha başta olmak üzere Suudi Arabistan piyasasına çıkacak sarı-kırmızılı oyuncuların performansına yönetim cephesinde güveniliyor."+
+    "<br>10- Erden Timur, tesise gelerek oyunculara en geç bir haftada alacakların kapatılacağının sözünü verdi.";}
+        else if(n==3){yaz.innerHTML="Haberde Fenerbahçe'nin 30 yaşındaki isimle prensip anlaşmasına vardığı belirtilirken, Milan'a resmi teklif yapmadığı için transferin gerçekleşmeyeceği ifade edildi.Milan'ın Krunic hakkındaki mesajının net olduğu ve ayrılık için 7 milyon Euro bonservis ücreti istediği vurgulandı.İtalyan devinin, tecrübeli orta sahayı 7 milyon Euro'dan düşük bir ücrete bırakmayı asla düşünmediği aktarıldı.Bu noktada Fenerbahçe'nin oyuncuyla anlaşmasına rağmen Milan'a teklif yapmamasının kulüp için sorunlu bir durum olduğu ve yaşananların ardından transferin çıkmaza girdiği bildirildi.Rade Krunic bu sezon Milan'da 14 maçta forma giydi.Krunic bu karşılaşmalarda gol ya da asist katkısı sağlayamadı.Güncel piyasa değeri 8.5 milyon Euro olan Krunic'in, Milan ile olan kontratı 2025'te bitecek.";}
+        else if(n==4){yaz.innerHTML="Sarı-kırmızılılarda, Davinson Sanchez, Hakim Ziyech, Angelino ve Sergio Oliveira kafilede yer almadı.İşte Fotomaç'ın haberine göre Okan Buruk'un muhtemel 11'i: Muslera, Boey, Nelsson, Abdülkerim, Barış Alper, Torreira, Kerem Demirbay, Mertens, Kerem, Zaha, Icardi.";}
+        else if(n==5){yaz.innerHTML="Sarı-lacivertliler, zorlu derbide ezeli rakibini devirerek kupayı müzesine götürmek istiyor. Fotomaç'ın haberine göre; Kanarya'nın muhtemel 11'i şu şekilde: Livakovic, Osayi-Samuel, Serdar Aziz, Djiku, Ferdi Kadıoğlu, İsmail Yüksek, Fred, İrfan Can Kahveci, Szymanski, Tadic, Dzeko";}
+        else if(n==6){yaz.innerHTML="Suudi Arabistan Ligi takımlarından Al Ahli'de forma giyen dünyaca ünlü futbolcu Roberto Firmino ile ilgili sıcak gelişmeler yaşanıyor.32 yaşındaki forvet yaz aylarında Liverpool'dan ayrılmış ve Al Ahli'ye transfer olmuştu. Arabistan'da istediğini bulamayan Brezilyalı forvet, bu sezon 18 maça çıktı.Firmino bu karşılaşmalarda 3 gol attı. Ayrıca 2 asist yaptı. Ocak ayında takımdan ayrılması beklenen Firmino hakkında bomba bir iddia geldi. Konuyla ilgili sıcak gelişmeyi İngiliz basını duyurdu. Dailymail'de yer alan habere göre Al Ahli, ocak ayında Firmino'yu kiralık olarak göndermeye sıcak bakıyor.Bu gelişme sonrası Sambacı futbolcuya Premier Lig'den bazı takımların talip olduğu kaydedildi. Öte yandan Firmino'ya Türkiye'den de ilgi olduğu ifade edildi. Ancak haberde Türkiye'den hangi kulüp ya da kulüplerin Firmo'ya talip olduğu belirtilmedi.Güncel piyasa değeri 10 milyon Euro olan Firmino'nun, kulübüyle olan sözleşmesi 2026'da sona erecek. 1.81 boyundaki futbolcu kariyerinde Hoffenheim, Tombense ve Figueirense FC gibi takımlarda da boy göstermişti.";}
+        else if(n==7){yaz.innerHTML="Rıza Çalımbay ile yollarını ayıran siyah-beyazlı yönetim, adaylarla temaslarını sıklaştırdı. Yoğun bir operasyon yürüten kurmaylar, yeni hocayı Kasımpaşa maçına yetiştirmek istiyor. Önceliği yabancı teknik adama veren Beşiktaş'ta Mircea Lucescu ismi de gündeme gelmişti. LUCESCU BEŞİKTAŞ'I REDDETTİ! Fotomac.com.tr'den Burak Şentürk'ün Rumen basınından derlediği habere göre; Deneyimli çalıştırıcı, siyah-beyazlı takımın teklifini geri çevirdi. Dinamo Kiev'den ayrılmasının ardından kulüpsüz durumda olan Lucescu'nun ara transfer döneminde bir takımı devralmak istemediği iddia edildi. Beşiktaş'a kapıyı tamamen kapatmayan Lucescu, sezon sonunu işaret etti. Önceden oluşturulmuş bir takımı anında devralmak istemeyen Lucescu, kendi stratejisi ve kendi transferlerini yapmak istediği için yaz aylarında görev yapmayı amaçlıyor. 2002 - 2004 yılları arasında Beşiktaş'ı çalıştıran Rumen hoca, 1 Süper Lig şampiyonluğu kazandı. Siyah-beyazlılarla 89 maçta görev alan Lucescu, 53 galibiyet, 17 mağlubiyet ve 19 beraberlik yaşadı.";}
+        else if(n==8){yaz.innerHTML="Süper Lig takımlarından Adana Demirspor'da Britt Assombalonga ile yollar ayrıldı. Mavi Şimşekler, ayrılığı resmi hesabından duyurdu. İşte yapılan o açıklama: Oyuncumuz Britt Assombalonga'nınkulübümüzle olan sözleşmesi karşılıklı anlaşılarak feshedilmiştir. Kendisine kulübümüze vermiş olduğu hizmetlerden dolayı teşekkür eder, bundan sonraki kariyerinde başarılar dileriz.";}
+        else if(n==9){yaz.innerHTML="Fenerbahçe ile Galatasaray ATV ekranlarında kapışacak. Saat 20.45'te başlayacak dev maçta şampiyon 65 milyon, ikinci 43 milyon lira kazanacak. Süper Kupa bugün sahibini buluyor. Süper Lig şampiyonu Galatasaray ile Türkiye Kupası'nı müzesine götüren Fenerbahçe, Suudi Arabistan'ın başkenti Riyad'da karşı karşıya gelecek. Al-Awwal Stadı'ndaki maç saat 20.45'te başlayacak. Maçı Abdülkadir Bitigen yönetecek. Türk futbolunun iki dev çınarı Galatasaray ile Fenerbahçe, 5 gün aradan sonra ikinci kez karşı karşıya gelecek. Süper Lig'in 18. haftasında 24 Aralık Pazar günü Ülker Stadı'nda karşılaşan iki takım birbirine üstünlük kuramamış ve maç golsüz sonuçlanmıştı. Takvim'in haberine göre; Sarı-kırmızılılar, Fenerbahçe ile oynadığı son 10 karşılaşmada üstünlük kurdu. İki takım arasında tamamı Süper Lig'de yapılan maçlarda Galatasaray 4, Sarı-Lacivertliler ise 2 galibiyet alabildi. 4 derbi ise beraberlikle sonuçlandı. Galatasaray'la oynadığı son 10 derbide 2 galibiyet alabilen Fenerbahçe, son 3 maçta rakibine gol atamadı. Hatta isabetli şut bile bulamadı.";}
+        else if(n==10){yaz.innerHTML="Fenerbahçe'nin yıldız golcüsü Edin Dzeko, Galatasaray ile oynayacakları Süper Kupa finali öncesi teknik direktör İsmail Kartal'la birlikte basın toplantısında konuştu. Sarı-lacivertlilerin Boşnak golcüsü Dzeko, Süper Lig'in 18. haftasında Kadıköy'de oynanan derbide tartıştığı Galatasaray'ın Arjantinli yıldızı Mauro Icardi ile ilgili olarak; İnsanlar maalesef aramızda bir problem varmış gibi yansıtmaya çalışıyorlar ama öyle bir şey söz konusu değil. Sahada olan sahada kalır ifadelerini kullandı."}
+      }
+     for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    
+    </script>
+    <style>
+        body{
+            background: #b7bbf0;
+            color: #fdfbfb;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            word-spacing:2px;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            
+        }
+        .sayfa{
+            width: 1160px;
+            margin:auto;
+        }
+        .ust{
+            background: #0d136b;
+            padding-left: 20px;
+            border-radius: 5px;
+        }
+        .alt{
+            background: #0d136b;
+        }
+        #logo{
+            float: left;
+            width: 280px;
+            margin-top: 7px;
+            margin-left: 10px;
+        }
+        
+        #logo h1{
+            margin: 0;
+            padding: 0;
+            font-size: 60px;
+            text-transform: uppercase;
+            
+        }
+        
+        #logo h1 a{
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            color: #DBDBDB;
+            letter-spacing: 3px;
+            
+        }
+        
+        #logo p{
+            color: #DBDBDB;
+            font-family: Georgia;
+            margin-left: 3px;
+            margin-top: 0;
+            padding-top: 0;
+            letter-spacing: 2px;
+        }
+        
+        #menu{
+            float: right;
+            width: 650px;
+            margin: 30px 0 0 0;
+            padding: 0;
+            font-size: 13px;
+            text-align: right;
+        }
+        
+        #menu ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        #menu ul li{
+            display:inline-block;
+            margin-right: 60px;
+        }
+        
+        #menu ul li a{
+            text-decoration: none;
+            font-size: 13px;
+            font-family: Verdana;
+            color: #DBDBDB;
+            
+        }
+        
+        .orta{
+            
+            margin-top: 20px;
+        }
+        .orta-sol{
+            
+            width: 575px;
+            float: left;
+            
+        }
+        .orta-sag{
+            border-radius: 5px;
+            width: 550px;
+            float: right;
+            height: 365px;
+            background: #0d136b;
+            padding: 10px;
+            
+        }
+        .orta-sag-h1{
+            font-size: 25px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background: #0d136b;
+            border-bottom: 4px dashed white;
+            padding-bottom: 15px;
+        }
+        .orta-sag-p{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .table{
+            margin-left: 7px;
+        }
+        .card{
+
+            width: 366px;
+            float: left;
+            margin-top: 0px;
+            background: #0d136b;
+            margin-right: 30px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .card:nth-child(3){
+            margin:0px;
+        }
+      
+        .card h1{
+            margin-left: 15px;
+            margin-right: 15px;
+            background: #0d136b;
+            border-bottom: 4px dashed white;
+            padding-bottom: 15px;
+            
+        }
+        
+        .button a{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            margin-left: 12px;
+            padding: 10px 15px;
+            color: #0d136b;
+            background-color: white;
+            text-decoration: none;
+            
+        }
+        
+        .clear{
+            clear: both;
+        }
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+
+        .mySlides {
+         display: none;
+         }
+
+        .prev, .next {
+         cursor: pointer;
+         position: absolute;
+         top: 50%;
+         width: auto;
+         margin-top: -22px;
+         padding: 16px;
+         color: white;
+         font-weight: bold;
+         font-size: 18px;
+         transition: 0.6s ease;
+         border-radius: 0 3px 3px 0;
+         user-select: none;
+        }
+
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        }
+
+       .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        margin-bottom: 10px;
+        background-color: #999898;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+        .date{
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        .active, .dot:hover {
+         background-color: #575757;
+        }
+
+       .fade {
+         animation-name: fade;
+         animation-duration: 1.5s;
+       }
+
+       @keyframes fade {
+         from {opacity: .4}
+         to {opacity: 1}
+        }
+        
+    </style>
+</head>
+<body onload="currentSlide(1)">
+    <div class="sayfa">
+        <div class="ust">
+            <div id="logo">
+                <h1><a>ETSSPOR</a></h1>
+                <div class="date">Son Güncelleme Tarihi: 29.12.2023</div>
+            </div>
+            
+            <div id="menu">
+                <ul>
+                    <li><a href="etsspor.html">Anasayfa</a></li>
+                    <li><a href="puandurumu.html">Puan Durumları</a></li>
+                    <li><a href="fikstur.html">Fikstür</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+            <div class="orta">
+                <div class="orta-sol">
+                    <div class="slideshow-container">
+
+                        
+                        <div class="mySlides fade" >
+                          
+                          <img src="1s.jpg" style="width:100%">
+                          
+                        </div>
+                      
+                        <div class="mySlides fade">
+                          
+                          <img src="2s.jpg" style="width:100%">
+                          
+                        </div>
+                      
+                        <div class="mySlides fade">
+                          
+                          <img src="3s.jpg" style="width:100%">
+                          
+                        </div>
+
+                        <div class="mySlides fade">
+                           
+                            <img src="4s.jpg" style="width:100%">
+                            
+                        </div>
+                      
+                        <div class="mySlides fade">
+                            
+                            <img src="5s.jpg" style="width:100%">
+                            
+                          </div>
+
+                        <div class="mySlides fade">
+                            
+                            <img src="6s.jpg" style="width:100%">
+                            
+                         </div>
+
+                         <div class="mySlides fade">
+                            
+                            <img src="7s.jpg" style="width:100%">
+                            
+                          </div>
+
+                          <div class="mySlides fade">
+                            
+                            <img src="8s.jpg" style="width:100%">
+                            
+                          </div>
+
+                          <div class="mySlides fade">
+                            
+                            <img src="9s.jpg" style="width:100%">
+                            
+                          </div>
+
+                          <div class="mySlides fade">
+                            
+                            <img src="10s.jpg" style="width:100%">
+                            
+                          </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      </div>
+                      <br>
+                      
+                      
+                      <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(8)"></span>
+                        <span class="dot" onclick="currentSlide(9)"></span>
+                        <span class="dot" onclick="currentSlide(10)"></span>
+                      </div>
+                </div>
+                <div class="orta-sag">
+                    <h1 class="orta-sag-h1">Son Haberler</h1>
+                    <p class="orta-sag-p" id="yaz"></p>
+                    
+                    
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+        
+        <div class="sayfa">
+            <div class="card">
+                <h1>2023/24 Sezonu Gol Krallığı</h1>
+                <table border="2" class="table" >
+                    <thead>
+                        <tr> 
+                        <td  align="center">  </td>
+                        <td  align="center"> Oyuncu Adı </td>
+                        <td  align="center"> Oynadığı Takım </td>
+                        <td  align="center"> Oynadığı Maç Sayısı </td>
+                        <td  align="center"> Attığı Gol </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>  
+                        <td  align="center"> 1. </td>    
+                        <td  align="center"> Harry Kane </td>
+                        <td  align="center"> Bayern Münih </td>
+                        <td  align="center"> 15 </td>
+                        <td  align="center"> 21 </td>
+                        </tr>
+                        <tr>
+                        <td  align="center"> 2. </td> 
+                        <td  align="center"> Cristiano Ronaldo </td>
+                        <td  align="center"> Al-Nassr </td>
+                        <td  align="center"> 18 </td>
+                        <td ” align="center"> 20 </td>
+                        </tr>
+                        <tr>
+                        <td  align="center"> 3. </td> 
+                        <td  align="center"> Marcus Haber </td>
+                        <td  align="center"> Svay Rieng </td>
+                        <td  align="center"> 15 </td>
+                        <td  align="center"> 19 </td>
+                        </tr>
+                        </tbody>
+                </table>
+                
+                <div class="button">
+                    <b><a href="golkral.html">Daha Fazla >></a></b> 
+                </div>
+            </div>
+            <div class="card">
+                <h1>2023/24 Asist Krallığı</h1>
+                <table border="2" class="table" >
+                    <thead>
+                        <tr> 
+                        <td  align="center">  </td>
+                        <td  align="center"> Oyuncu Adı </td>
+                        <td  align="center"> Oynadığı Takım </td>
+                        <td  align="center"> Oynadığı Maç Sayısı </td>
+                        <td  align="center"> Yaptığı Asist </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>  
+                        <td  align="center"> 1. </td>    
+                        <td  align="center"> Elias Aguilar </td>
+                        <td  align="center"> Herediano </td>
+                        <td  align="center"> 20 </td>
+                        <td  align="center"> 13 </td>
+                        </tr>
+                        <tr>
+                        <td  align="center"> 2. </td> 
+                        <td  align="center"> Cameron Puertas </td>
+                        <td  align="center"> Union Saint Gillose </td>
+                        <td  align="center"> 20 </td>
+                        <td  align="center"> 12 </td>
+                        </tr>
+                        <tr>
+                        <td  align="center"> 3. </td> 
+                        <td  align="center"> Stefano Lilipaly </td>
+                        <td  align="center"> Borneo FC </td>
+                        <td  align="center"> 23 </td>
+                        <td  align="center"> 11 </td>
+                        </tr>
+                        </tbody>
+                </table>
+                
+                <div class="button">
+                    <b><a href="asistkral.html">Daha Fazla >></a></b>  
+                </div>
+            </div>
+            <div class="card">
+                <h1>Dünyanın En Değerli Takımları</h1>
+                <table border="2" class="table" >
+                    <thead>
+                        <tr> 
+                        <td  align="center">  </td>
+                        <td  align="center"> Takım Adı </td>
+                        <td  align="center"> Oynadığı Ülke </td>
+                        <td  align="center"> Piyasa Değeri </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>  
+                        <td  align="center"> 1. </td>    
+                        <td  align="center"> Manchester City </td>
+                        <td  align="center"> İngiltere </td>
+                        <td  align="center"> 1.29 milyar € </td>
+                        </tr>
+                        <tr>
+                        <td  align="center"> 2. </td> 
+                        <td  align="center"> Arsenal </td>
+                        <td  align="center"> İngiltere </td>
+                        <td  align="center"> 1.11 milyar € </td>
+                        </tr>
+                        <tr>
+                        <td  align="center"> 3. </td> 
+                        <td  align="center"> Real Madrid </td>
+                        <td  align="center"> İspanya </td>
+                        <td  align="center"> 1.04 milyar € </td>
+                        </tr>
+                        </tbody>
+                </table>
+                
+                <div class="button">
+                    <b><a href="piyasadegeri.html">Daha Fazla >></a></b> 
+                </div>
+             </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>
